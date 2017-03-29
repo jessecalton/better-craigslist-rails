@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # categories = []
 # 10.times {Category.create(name: Faker::GameOfThrones.city, description: Faker::GameOfThrones.character)}
-10.times {Category.create(name: Faker::GameOfThrones.city, description: Faker::GameOfThrones.character)}
+10.times {Category.create(name: Faker::GameOfThrones.city, description: Faker::Hipster.sentences(1, true))}
 categories = Category.all
 categories.each do |category|
-  post = Post.new(title: Faker::GameOfThrones.city, body: Faker::GameOfThrones.city, author: Faker::GameOfThrones.city)
+  post = Post.new(title: Faker::Commerce.department, body: Faker::ChuckNorris.fact, author: Faker::Cat.name)
   category.posts << post
 end
